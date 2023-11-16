@@ -49,7 +49,7 @@ project/
 
 1. Clonez le dépôt :
    ```
-   git clone [URL_du_dépôt]
+   git clone https://github.com/mikepixeldev/ohmyfood-project4
    ```
 2. Naviguez dans le dossier du projet :
    ```
