@@ -2,7 +2,7 @@
 
 ## Description
 
-Ce projet est le site web officiel d'Ohmyfood Paris, une entreprise innovante dans le domaine de la restauration. Le site présente les menus de différents restaurants partenaires à Paris, offrant une expérience utilisateur unique avec des animations CSS sophistiquées et un design responsive.
+Ce projet est le site web officiel d'Ohmyfood Paris, développé dans le cadre d'un projet OpenClassrooms. Il présente les menus de différents restaurants partenaires à Paris, offrant une expérience utilisateur unique avec des animations CSS sophistiquées et un design responsive.
 
 ## Fonctionnalités
 
