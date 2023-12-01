@@ -31,7 +31,7 @@ project/
 │   ├── base.scss
 │   ├── components.scss
 │   ├── layout.scss
-│   ├── pages.scss
+│   ├── menu.scss
 │   ├── variables.scss
 │   └── main.scss
 │
@@ -49,7 +49,7 @@ project/
 
 1. Clonez le dépôt :
    ```
-   git clone https://github.com/mikepixeldev/ohmyfood-project4 
+   git clone https://github.com/mikepixeldev/ohmyfood-project4
    ```
 2. Naviguez dans le dossier du projet :
    ```
