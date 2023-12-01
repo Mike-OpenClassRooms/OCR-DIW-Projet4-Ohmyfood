@@ -1,0 +1,405 @@
+@use "variables";
+
+
+/* Styles Généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+  }
+  
+  :root {
+    --primary-color: #9356dc;
+    --secondary-color: #ff79da;
+    --tertiary-color: #99e2d0;
+    --Background: #f6f6f6;
+    --Button-Gradient: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  }
+  
+  /* Polices */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    padding: 14px 0px 13px;
+    gap: 42px;
+    width: 100%;
+  }
+  
+  .GoBack {
+    display: none;
+    margin-left: 17px;
+  }
+  
+  .logo {
+    margin: 0 auto;
+  }
+  
+  .localisation-champ /* Corriger l'espace entre l'icône et le texte de l'input */ {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    justify-content: center;
+    width: 100%;
+    background: #eaeaea;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .localisation-champ .fa-location-dot {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .localisation {
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    text-align: center;
+    background: #eaeaea;
+  }
+  
+  /* Section Exploration */
+  #exploration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 0 60px;
+    background: var(--Background);
+  }
+  
+  #exploration h1,
+  #exploration p {
+    text-align: center;
+    max-width: 315px;
+    margin: 0 auto;
+  }
+  
+  #exploration button {
+    border: none;
+    outline: none;
+    background: var(--Button-Gradient);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 25px;
+    width: 218px;
+    height: 50px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover, &:focus {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+  
+  /* Section Fonctionnement */
+  #fonctionnement {
+    background: white;
+    padding: 50px 0px;
+  }
+  
+  #fonctionnement h1 {
+    margin-left: 20px;
+  }
+  
+  .pills-tutorial {
+    display: flex;
+    flex-direction: column;
+    gap: 24.92px;
+    margin: 26px 20px 29.36px 32.51px;
+  }
+  
+  .pill {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    border-radius: 20px;
+    background: var(--Background);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+  }
+  
+  .pill span /* Corriger la position du chiffre */ {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pill i /* Corriger l'alignement des icônes */ {
+    color: var(--grey-tint-4, #7e7e7e);
+  }
+  
+  /* Section Restaurants */
+  #restaurants {
+    background: var(--Background);
+    padding: 50px 0 10px;
+  }
+  
+  #restaurants h1 {
+    margin-left: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .menus-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin: 0 18px 66px 17px;
+    width: 340px;
+  }
+  
+  .card-restaurant {
+    align-self: stretch;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card-restaurant img {
+    width: 100%;
+    max-height: 174px;
+    object-fit: cover;
+  }
+  
+  .badge-nouveau {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    width: 80px;
+    height: 29px;
+    border-radius: 2px;
+    background: #99e2d0;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    color: #008766;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-love {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .card-description h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .card-description p {
+    font-size: 17px;
+    font-weight: 300;
+  }
+  
+  .card-love i {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    bottom: 33px;
+    font-size: 22px;
+  }
+  
+  /* Footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #353535;
+    padding: 22px 25px;
+  }
+  
+  footer .logo {
+    display: flex;
+    align-items: flex-start;
+    filter: brightness(0) invert(1);
+    height: 18px;
+    margin-left: 0;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+  
+  .footer-links a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+  }
+  
+/* Loader Pac-Man */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 3s ease-in-out forwards;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+  
+  .pacman {
+    position: relative;
+    width: 70px; 
+    height: 70px;
+    background: transparent;
+    z-index: 1;
+  
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      border-radius: 50%;
+      content: '';
+      height: 0;
+      width: 0;
+    }
+  
+    &::before {
+      animation: chunk-top 0.5s ease infinite;
+      border: 35px solid var(--primary-color);
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+    }
+  
+    &::after {
+      animation: chunk-bottom 0.5s ease infinite;
+      border: 35px solid var(--primary-color);
+      border-right-color: transparent;
+      border-top-color: transparent;
+    }
+  }
+  
+  .path {
+    background: var(--secondary-color);
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0.5rem;
+  }
+  
+  @keyframes chunk-top {
+    0%, 100% {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+    50% {
+      transform: translateY(-50%) rotate(-80deg);
+    }
+  }
+  
+  @keyframes chunk-bottom {
+    0%, 100% {
+      transform: translateY(-50%) rotate(-40deg);
+    }
+    50% {
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  
+  /* Media Queries */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Styles pour version tablette */
+  }
+  
+  @media (min-width: 1025px) {
+    /* Styles pour version desktop */
+  }
+  
