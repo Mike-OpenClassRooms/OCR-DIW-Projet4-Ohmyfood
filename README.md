@@ -25,8 +25,8 @@ project/
 │   └── images/      # Images et icônes
 │
 ├── css/             # Fichiers CSS compilés
-│   └── main.css
-│
+│   ├── main.css
+│   └── menu.css
 ├── scss/            # Fichiers SASS
 │   ├── base.scss
 │   ├── components.scss
