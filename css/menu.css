@@ -44,7 +44,6 @@ p {
 /* Header */
 header {
   display: flex;
-  width: 375px;
   height: 65px;
   padding: 14px 0;
   align-items: center;
@@ -73,8 +72,15 @@ header {
 }
 
 /* Contenu principal */
+#contenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #contenu img {
-  width: 375px;
+  width: 100%;
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -82,7 +88,7 @@ header {
 
 /* Section Menu */
 #menu {
-  width: 375px;
+  width: 100%;
   height: auto;
   flex-shrink: 0;
   background: var(--Background);
@@ -93,6 +99,7 @@ header {
   padding-top: 40px;
   border-radius: 37px 37px 0 0;
   margin-top: -40px;
+  max-width: 375px;
 }
 
 /* Section Menu Titre */
@@ -149,23 +156,21 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   padding: 15px;
   position: relative;
+  overflow: hidden;
 }
 
-.fa-check {
+/* Styles pour la check-mark */
+.check-mark {
+  width: 80px;
+  height: 100%;
+  background-color: var(--tertiary-color);
   position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 20px;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 2;
-  color: var(--primary-color);
+  right: 0;
+  transform: translateX(80px);
 }
 
-.cards-menu:hover .fa-check {
-  opacity: 1;
-  transform: translateX(0);
+.fa-circle-check {
+  color: white;
 }
 
 .plate-price {
@@ -298,5 +303,60 @@ footer .logo {
   /* Styles pour version tablette */
 }
 @media (min-width: 1025px) {
-  /* Styles pour version desktop */
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 180px;
+    width: auto;
+  }
+  .GoBack {
+    display: block;
+  }
+  .header-logo {
+    padding-top: 30px;
+    padding-bottom: 32px;
+    width: 200px;
+    max-height: none;
+  }
+  /* Contenu Image */
+  #contenu img {
+    width: 100%;
+    height: 360px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* Section Menu */
+  #menu {
+    display: flex;
+    justify-content: center;
+    display: inline-flex;
+    max-width: 1055px;
+    margin: -40px 180px 0;
+  }
+  #menu-titre {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+  /* Choix nourriture */
+  .cards-menu {
+    width: 604px;
+  }
+  /* Footer */
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 30px 25px 59px;
+  }
+  footer .logo {
+    margin-right: 34px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }/*# sourceMappingURL=menu.css.map */

@@ -53,6 +53,7 @@ header {
 .header-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 14px 0px 13px;
   gap: 42px;
   width: 100%;
@@ -63,10 +64,6 @@ header {
   margin-left: 17px;
 }
 
-.logo {
-  margin: 0 auto;
-}
-
 .localisation-champ {
   display: flex;
   align-items: center;
@@ -74,7 +71,7 @@ header {
   justify-content: center;
   width: 100%;
   background: #eaeaea;
-  text-align: center;
+  text-align: left;
   margin: 0;
   padding: 0;
 }
@@ -90,7 +87,7 @@ header {
   font-weight: 500;
   border: none;
   outline: none;
-  text-align: center;
+  text-align: left;
   background: #eaeaea;
 }
 
@@ -123,10 +120,11 @@ header {
   border-radius: 25px;
   width: 218px;
   height: 50px;
+  margin-top: 7px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 #exploration button:hover, #exploration button:focus {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
@@ -143,8 +141,8 @@ header {
 .pills-tutorial {
   display: flex;
   flex-direction: column;
-  gap: 24.92px;
-  margin: 26px 20px 29.36px 32.51px;
+  gap: 25px;
+  margin: 26px 20px 29.36px 33px;
 }
 
 .pill {
@@ -180,6 +178,9 @@ header {
 
 /* Section Restaurants */
 #restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   background: var(--Background);
   padding: 50px 0 10px;
 }
@@ -265,10 +266,110 @@ header {
   font-size: 22px;
 }
 
-/* Footer */
+/* Animation cœur */
+svg {
+  height: 22px;
+  overflow: visible;
+  cursor: pointer;
+}
+
+label {
+  transform: translateX(-25px);
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+input[type=checkbox] + label #center-heart #inner {
+  fill: transparent;
+  transition: 0.2s ease;
+}
+input[type=checkbox] + label #center-heart #outer {
+  fill: black;
+  transition: 0.2s ease;
+}
+input[type=checkbox] + label #left-hearts > *,
+input[type=checkbox] + label #right-hearts > * {
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+input[type=checkbox]:checked + label {
+  cursor: pointer;
+}
+input[type=checkbox]:checked + label::before, input[type=checkbox]:checked + label::after {
+  content: "";
+  display: grid;
+  border-radius: 100%;
+  position: absolute;
+  outline: 25px solid var;
+  height: 300px;
+  width: 300px;
+  animation: scalePulse 0.5s cubic-bezier(0.12, 0.84, 0.5, 0.44) forwards;
+}
+input[type=checkbox]:checked + label::after {
+  opacity: 1;
+  transform: scale(0);
+  animation-delay: 0.2s;
+}
+input[type=checkbox]:checked + label #center-heart #inner {
+  fill: url(#heart-gradient);
+}
+input[type=checkbox]:checked + label #center-heart #outer {
+  fill: url(#heart-gradient);
+}
+input[type=checkbox]:checked + label #left-hearts > *,
+input[type=checkbox]:checked + label #right-hearts > * {
+  transform-origin: center center;
+  animation: floatingHearts 0.65s cubic-bezier(0.12, 0.84, 0.5, 0.44) forwards;
+}
+input[type=checkbox]:checked + label #right-hearts g:first-child {
+  animation-delay: 0.3s;
+}
+input[type=checkbox]:checked + label #right-hearts g:last-child {
+  animation-delay: 0.1s;
+}
+input[type=checkbox]:checked + label #left-hearts g:first-child {
+  animation-delay: 0.2s;
+}
+input[type=checkbox]:checked + label #left-hearts g:last-child {
+  animation-delay: 0.5s;
+}
+
+@keyframes floatingHearts {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@keyframes scalePulse {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
   background: #353535;
   padding: 22px 25px;
@@ -389,5 +490,83 @@ footer .logo {
   /* Styles pour version tablette */
 }
 @media (min-width: 1025px) {
-  /* Styles pour version desktop */
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+  }
+  .header-logo {
+    padding-top: 30px;
+    padding-bottom: 32px;
+    width: 200px;
+  }
+  /* Section Exploration */
+  #exploration h1,
+  #exploration p {
+    max-width: none;
+  }
+  #exploration h1 {
+    font-size: 40px;
+  }
+  #exploration {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 18px;
+  }
+  /* Section Fonctionnement et Restaurants */
+  #fonctionnement,
+  #restaurants {
+    padding: 30px 180px;
+    margin: 0;
+  }
+  #fonctionnement h1,
+  #restaurants h1 {
+    margin: 0;
+  }
+  .pills-tutorial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 37px;
+    margin: 25px 0 50px;
+  }
+  .pill {
+    flex: 1;
+    max-width: calc(33.3333333333% - 37px);
+    padding: 28px;
+  }
+  /* Section Restaurants */
+  .menus-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: auto;
+  }
+  .card-restaurant {
+    flex: 1 1 calc(50% - 50px);
+    max-width: calc(50% - 50px);
+    height: auto;
+  }
+  .card-restaurant img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* Footer */
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 30px 25px;
+    gap: 16px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */
