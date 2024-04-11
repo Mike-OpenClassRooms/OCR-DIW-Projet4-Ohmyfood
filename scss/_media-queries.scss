@@ -1,0 +1,159 @@
+/* Media Queries */
+
+@media (min-width: 768px) {
+  /* Section Restaurants */
+  .menus-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 7.5%;
+    width: auto;
+  }
+
+  .card-restaurant {
+    flex: 1 1 calc(50% - 50px);
+    max-width: calc(50% - 50px);
+    height: auto;
+
+    img {
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+
+  .recettes {
+    flex-basis: 49%;
+  }
+
+  .choix-plats .liste-plats {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .menu-container,
+  section {
+    padding: 4rem;
+  }
+
+  .recettes {
+    flex-basis: 32%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1311px) {
+  /* Styles pour petits écrans de bureau */
+
+  #fonctionnement,
+  #restaurants {
+    padding: 30px 4.5%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Header */
+
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-logo {
+    padding-top: 30px;
+    padding-bottom: 32px;
+    width: 200px;
+  }
+
+  /* Section Exploration */
+
+  #exploration {
+    h1,
+    p {
+      max-width: none;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 18px;
+  }
+
+  /* Section Fonctionnement et Restaurants */
+
+  #fonctionnement h1,
+  #restaurants h1 {
+    margin: 0;
+  }
+
+  .pills-tutorial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 37px;
+    margin: 25px 0 50px;
+  }
+
+  .pill {
+    flex: 1;
+    max-width: calc(33.3333333333% - 37px);
+    padding: 28px;
+  }
+
+  /* Section Restaurants */
+
+  .menus-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  /* Footer */
+
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 30px 25px;
+    gap: 16px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .menu-container,
+  section {
+    padding: 4rem 8rem;
+  }
+}
+
+@media (min-width: 1312px) {
+  /* Styles pour écrans larges */
+
+  #fonctionnement,
+  #restaurants {
+    padding: 30px 12.5%;
+    margin: 0;
+  }
+}
