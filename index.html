@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Encodage des caractères -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Titre de la page -->
+  <title>Ohmyfood Paris</title>
+
+  <!-- Description du site -->
+  <meta name="description"
+    content="Ohmyfood Paris - Découvrez nos menus gourmands et réservez votre table dès maintenant !">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+  <!-- Polices Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+    rel="stylesheet" />
+
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <!-- FontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/3c74274841.js" crossorigin="anonymous"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ohmyfood Paris" />
+  <meta property="og:description" content="Découvrez nos menus gourmands et réservez votre table dès maintenant !" />
+  <meta property="og:url" content="https://ohmyfood.com" />
+  <meta property="og:image" content="./assets/logo/ohmyfood.png" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ohmyfood Paris">
+  <meta name="twitter:description" content="Découvrez nos menus gourmands et réservez votre table dès maintenant !">
+  <meta name="twitter:image" content="./assets/logo/ohmyfood.png">
+
+  <!-- Ce site est un projet OpenClassRooms pour apprendre SCSS -->
+
+</head>
+
+
+<body>
+  <!-- Loader Pac-Man -->
+  <div class="loader">
+    <div class="container">
+      <div class="pacman"></div>
+      <div class="path"></div>
+      <div class="path"></div>
+      <div class="path"></div>
+      <div class="path"></div>
+      <div class="path"></div>
+      <div class="path"></div>
+      <div class="path"></div>
+      <div class="path"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-logo">
+      <img class="logo" src="./assets/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood Paris" />
+    </div>
+    <div class="localisation-champ">
+      <i class="fa-solid fa-location-dot"></i>
+      <input class="localisation" type="text" placeholder="Paris, Belleville" readonly />
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <!-- Section Exploration -->
+    <section id="exploration">
+      <h1>Réservez le menu qui vous convient</h1>
+      <p>
+        Découvrez des restaurants d’exception, sélectionnés par nos soins.
+      </p>
+      <button>Explorer nos restaurants</button>
+    </section>
+
+    <!-- Section Fonctionnement -->
+    <section id="fonctionnement">
+      <h1>Fonctionnement</h1>
+      <div class="pills-tutorial">
+        <div class="pill">
+          <span>1</span>
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          Choisissez un restaurant
+        </div>
+        <div class="pill">
+          <span>2</span>
+          <i class="fa-solid fa-list-ul"></i>
+          Composez votre menu
+        </div>
+        <div class="pill">
+          <span>3</span>
+          <i class="fa-solid fa-store"></i>
+          Dégustez au restaurant
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Restaurants -->
+    <section id="restaurants">
+      <h1>Restaurants</h1>
+      <div class="menus-cards">
+        <!-- Card 1 -->
+        <div class="card-restaurant">
+          <a href="./menu-la-palette-du-gout.html">
+            <img src="./assets/restaurants/restaurant-la-palette-du-gout.jpg" alt="La palette du goût" />
+            <span class="badge-nouveau">Nouveau</span></a>
+          <div class="card-love">
+            <div class="card-description">
+              <h2>La palette du goût</h2>
+              <p>Ménilmontant</p>
+            </div>
+            <button class="bouton-like bouton--mr"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card-restaurant">
+          <a href="./menu-la-note-enchantee.html">
+            <img src="./assets/restaurants/la-note-enchantee-restaurant-paris.jpg" alt="La note enchantée" />
+            <span class="badge-nouveau">Nouveau</span>
+          </a>
+          <div class="card-love">
+            <div class="card-description">
+              <h2>La note enchantée</h2>
+              <p>Charonne</p>
+            </div>
+            <button class="bouton-like bouton--mr"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-restaurant">
+          <a href="./menu-a-la-francaise.html">
+            <img src="./assets/restaurants/a-la-francaise-paris.jpg" alt="À la française" />
+          </a>
+          <div class="card-love">
+            <div class="card-description">
+              <h2>À la française</h2>
+              <p>Cité Rouge</p>
+            </div>
+            <button class="bouton-like bouton--mr"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card-restaurant">
+          <a href="./menu-le-delice-des-sens.html">
+            <img src="./assets/restaurants/le-delice-des-sens-gastronomie-paris.jpg" alt="Le délice des sens" />
+          </a>
+          <div class="card-love">
+            <div class="card-description">
+              <h2>Le délice des sens</h2>
+              <p>Folie-Méricourt</p>
+            </div>
+            <button class="bouton-like bouton--mr"><i class="fa-regular fa-heart"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <img class="logo" src="./assets/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" />
+    <nav class="footer-links">
+      <a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a>
+      <a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a>
+      <a href="#">Mentions légales</a>
+      <a href="mailto:contact@ohmyfood.com">Contact</a>
+    </nav>
+  </footer>
+</body>
+
+</html>

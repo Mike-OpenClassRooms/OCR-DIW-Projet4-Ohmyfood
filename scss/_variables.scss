@@ -1,6 +1,12 @@
-// Variables pour les tailles de logo
-$mobile-logo-width: 162px;
-$desktop-logo-width: 200px;
-$footer-logo-height: 18px;
-$breakpoint-desktop: 768px;
-
+:root {
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --Background: #f6f6f6;
+  --Button-Gradient: linear-gradient(180deg, #ff79da -11.44%, #9356dc 123.93%);
+  --Button-Gradient-Over: linear-gradient(
+    180deg,
+    #ff79da -5.2%,
+    #9356dc 110.74%
+  );
+}

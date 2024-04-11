@@ -1,0 +1,236 @@
+@use "base";
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0px 13px;
+  gap: 42px;
+  width: 100%;
+}
+
+.localisation-champ {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: center;
+  width: 100%;
+  background: #eaeaea;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  .fa-location-dot {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.localisation {
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  text-align: left;
+  background: #eaeaea;
+}
+
+/* Section Exploration */
+
+#exploration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0 60px;
+  background: var(--Background);
+
+  h1,
+  p {
+    text-align: center;
+    max-width: 315px;
+    margin: 0 auto;
+  }
+  /* Bouton d'exploration */
+  button {
+    border: none;
+    outline: none;
+    background: var(--Button-Gradient);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 25px;
+    width: 218px;
+    height: 50px;
+    margin-top: 7px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.15) 0%,
+          rgba(255, 255, 255, 0.15) 100%
+        ),
+        var(--Button-Gradient-Over);
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+}
+
+/* Section Fonctionnement */
+
+#fonctionnement {
+  background: white;
+  padding: 50px 0px;
+
+  h1 {
+    margin-left: 20px;
+  }
+}
+
+.pills-tutorial {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 26px 20px 29.36px 33px;
+}
+
+.pill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+  border-radius: 20px;
+  background: var(--Background);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  i {
+    color: var(--grey-tint-4, #7e7e7e);
+  }
+}
+
+/* Section Restaurants */
+
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  background: var(--Background);
+  padding: 50px 0 10px;
+
+  h1 {
+    align-self: flex-start;
+    margin-left: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+.menus-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin: 0 18px 66px 17px;
+  padding: 0 18px;
+  width: 100%;
+}
+
+.card-restaurant {
+  align-self: stretch;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+
+  img {
+    width: 100%;
+    max-height: 174px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
+.badge-nouveau {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  background: #99e2d0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  color: #008766;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-love {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
+
+.card-love i {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  bottom: 33px;
+  font-size: 22px;
+}

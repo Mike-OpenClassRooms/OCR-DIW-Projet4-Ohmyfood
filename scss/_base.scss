@@ -1,0 +1,80 @@
+@charset "UTF-8";
+// Réinitialisation et styles de base
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; // Base font size pour un meilleur contrôle de la taille des polices en REM
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  line-height: 1.2;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+// Styles génériques pour les titres
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+// Styles pour les paragraphes
+p {
+  margin-bottom: 1rem;
+}
+
+// Listes
+ul {
+  list-style: none;
+}
+
+// Liens
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+// Boutons et inputs
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+// Images et vidéos
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+// Focussable elements
+:focus {
+  outline: 2px solid blue;
+}
